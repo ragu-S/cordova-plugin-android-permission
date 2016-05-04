@@ -162,6 +162,9 @@ Permissions.prototype = {
     },
     requestPermission: function(successCallback, errorCallback, params) {
         cordova.exec(successCallback, errorCallback, permissionsName, 'requestPermission', [params]);
+    },
+    requestRestart: function() {
+        cordova.exec(function(){}, function(){}, permissionsName, 'requestRestart', []);
     }
 };
 
